@@ -17,6 +17,8 @@ const App = () => {
                 finished: false
             }
         ]);
+
+        setTodoValue("");
     }
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -27,7 +29,11 @@ const App = () => {
         <div>
             <h1>Welcome to my todo appis</h1>
             <TodoList todos={todos} />
-            <TodoForm onSubmit={handleSubmit} onInputChange={handleChange} />
+            <TodoForm 
+                onSubmit={handleSubmit} 
+                onInputChange={handleChange}
+                inputValue = {todoValue} 
+            />
         </div>
     )
 
