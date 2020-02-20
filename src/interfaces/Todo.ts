@@ -1,4 +1,4 @@
-export interface Todo{
+export default interface Todo{
     task: string,
     finished: boolean;
 }
